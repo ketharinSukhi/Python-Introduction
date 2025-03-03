@@ -11,8 +11,8 @@ def get_int(prompt):
     except ValueError:
       pass
 main()"""
-
-import random
+#random
+"""import random
 
 coin = random.choice(["heads", "tails"])
 number = random.randint(1, 10)
@@ -20,5 +20,18 @@ cards = ["jack","king","queen"]
 random.shuffle(cards)
 for card in cards:
    print(card)
-print(coin, number)
+print(coin, number)"""
+
+#average
+import sys
+
+if len(sys.argv)<2 :
+  print("too few arguments")
+elif len(sys.argv)>2 :
+  print("too many arguments")
+else:
+  print("hello, my name is", sys.argv[1])
+
+  
+
 
