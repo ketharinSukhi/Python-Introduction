@@ -29,11 +29,22 @@ main()"""
 
 #list
 
-students = ["Hermione","Harry","Ron"]
+""""students = ["Hermione","Harry","Ron"]
 
 
 for i in range(len(students)):
-    print(i+1,students[i])
+    print(i+1, students[i])"""
+
+#dict
+students = {"Hermione":"Gryffindor",
+            "Harry":"Gryffindor",
+            "Ron":"Gryffindor",
+             "Draco":"Slytherin" 
+             }
+
+s=str(input("enter s: "))
+print(students[s])
+
 
 
 
