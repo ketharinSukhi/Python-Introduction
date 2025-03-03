@@ -26,9 +26,20 @@ def main():
         print("even")
     else:
         print("odd")
-def is_even(x):
-    if x%2 ==0:
-        return True
-    else:
-        return False
+def is_even(number):
+    return number%2 ==0 
 main()
+
+#match
+name = input("what's your name: ")
+match name:
+    case "Harry":
+        print("Gryffindor")
+    case "Hermione":
+        print("Gryffindor")
+    case "Ron":
+        print("Gryffindor")
+    case "Draco":
+        print("Slytherin")
+    case _:
+        print("who?")
