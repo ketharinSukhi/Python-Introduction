@@ -11,8 +11,8 @@ while i<4:
     break
 for _ in range(n):
   print("hello")"""
-
-def main():
+#function and loops
+"""def main():
     number = get_number()
     hello(number)
 
@@ -25,7 +25,15 @@ def get_number():
 def hello(n):
     for _ in range(n):
         print("hello")
-main()
+main()"""
+
+#list
+
+students = ["Hermione","Harry","Ron"]
+
+
+for i in range(len(students)):
+    print(i+1,students[i])
 
 
 
