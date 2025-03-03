@@ -1,9 +1,13 @@
-while True:
-   try :
-      x=int(input("what's x? "))
+def main():
+   x=get_int("what's x? ")
+   print(f"x is {x}")
+
+
+def get_int(prompt):
+  while True:
+    try :
+     return int(input(prompt))
    
-   except ValueError:
-      print("x is not integer")
-   else:
-      break
-print(f"x is {x}")
+    except ValueError:
+      pass
+main()
