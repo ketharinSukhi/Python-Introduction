@@ -15,5 +15,7 @@ def main():
 
 def square(n):
     return pow(n, 2)
-main()
+
+if __name__ == "__main__":
+   main()
 
