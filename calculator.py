@@ -14,7 +14,7 @@ def main():
     print("x squared is",square(x))
 
 def square(n):
-    return pow(n, 2)
+    return n + n
 
 if __name__ == "__main__":
    main()
