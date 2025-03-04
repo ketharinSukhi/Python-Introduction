@@ -19,5 +19,8 @@ def test_str():
 
 from hello import hello
 
-def test_hello():
-    hello("sukhi") == "hello, sukhi"
+def test_default():
+    hello() == "hello, world"
+def test_argument():
+     for name in ["Hermione", "Harry", "Ron"]:
+       assert hello(name) == f"hello, {name}"
