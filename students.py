@@ -15,18 +15,7 @@ students = []
 with open("students.csv") as file:
     reader = csv.reader(file)
     for name, home in reader:
-        students.append({"name": name, "home":home})
-    """for line in file:
-        name, home = line.rstrip().split(",")
-        student = {"name":name, "home":home}
-        student["name"]=name
-        student["home"]=home
-        students.append(student)"""
-
-""""def get_name(student):
-    return student["name"]
-def get_home(student):
-    return student["name"]"""
+        students.append({"name": name, "home": home})
 
 for student in sorted(students, key=lambda student: student["name"]):
     print(f"{student['name']} is from {student['home']}")
