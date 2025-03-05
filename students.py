@@ -31,16 +31,18 @@ with open("students.csv","a") as file:
     writer.writerow({"name": name, "home":home})"""
 
 #OOP
+class Student:
+    ...
 
 def main():
     student= get_student()
-    print(f"{student['name']} from {student['house']}")
+    print(f"{student.name} from {student.house}")
 
 
 def get_student():
-    student = {}
-    student["name"] = input("name: ")
-    student["house"] = input("house: ")
+    student = Student()
+    student.name = input("Name: ")
+    student.house = input("House: ")
     return student
 
 if __name__ =="__main__":
