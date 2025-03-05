@@ -1,10 +1,12 @@
-email = input("what's your email ").strip()
+import re
+email = input("what's your email? ").strip()
 
-if "@" in email:
-    print(f"{email} is valid")
+username, domain = email.split("@")
+
+if re.search(".+@.+", email):
+    print("valid")
 else:
-    print("invalid")
-
+    print("Invalid")
 
 
 
