@@ -6,10 +6,10 @@ if matches:= re.search(r"^(.+), (.+)$", name):
 print(f"hello,{name}")"""
 
 #facebook URL
-
+import re
 url = input("URL : ").strip()
 
-username = url.replace("https://www.facebook.com/" , "")
-print(f"Username: {username}")
+if matches:=re.search(r"^https?://(www\.)?facebook\.com/(.+)$" , url, re.IGNORECASE):
+    print(f"Username:" , matches.group(2))
 
 
