@@ -1,6 +1,6 @@
 import sys
 
-from PIL import Image # type: ignore
+from PIL import Image 
 images = []
 
 for arg in sys.argv[1:]:
