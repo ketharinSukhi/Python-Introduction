@@ -21,11 +21,26 @@ for student in sorted(students, key=lambda student: student["name"]):
     print(f"{student['name']} is from {student['home']}")"""
 
 #CsvWriter
-import csv
+"""import csv
 
 name = input("what your name? ")
 home = input("where's your home? ")
 
 with open("students.csv","a") as file:
     writer = csv.DictWriter(file, fieldnames=["name", "home"])
-    writer.writerow({"name": name, "home":home})
+    writer.writerow({"name": name, "home":home})"""
+
+#OOP
+
+def main():
+    name, house= get_student()
+    print(f"{name} from {house}")
+
+
+def get_student():
+    name = input("name: ")
+    house = input("house: ")
+    return name, house
+
+if __name__ =="__main__":
+    main()
