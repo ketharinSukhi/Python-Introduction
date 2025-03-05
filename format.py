@@ -9,7 +9,7 @@ print(f"hello,{name}")"""
 import re
 url = input("URL : ").strip()
 
-if matches:=re.search(r"^https?://(www\.)?facebook\.com/(.+)$" , url, re.IGNORECASE):
-    print(f"Username:" , matches.group(2))
+if matches:=re.search(r"^https?://(?:www\.)?facebook\.com/(.+)$" , url, re.IGNORECASE):
+    print(f"Username:" , matches.group(1))
 
 
