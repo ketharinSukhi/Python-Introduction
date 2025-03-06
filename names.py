@@ -20,7 +20,7 @@ file.close()"""
       print("hello, " ,line.rstrip())"""
 
 #sorted name
-names = []
+"""names = []
 
 with open("names.txt") as file:
     for line in file:
@@ -28,7 +28,23 @@ with open("names.txt") as file:
 
 for name in sorted(names):
 #for name in sorted(names, reverse=True):
-    print(f"hello, {name}")
+    print(f"hello, {name}")"""
+
+
+#
+students = [
+            {"name":"Hermione","house":"Gryffindor"},
+            {"name":"Harry","house":"Gryffindor"},
+            {"name":"Ron","house":"Gryffindor"},
+            {"name":"Draco","house":"Slytherin"}
+             ]
+houses = set()
+for student in students:
+    if student in students:
+        houses.add(student["house"])
+
+for house in sorted(houses):
+    print(house)
 
 
 
