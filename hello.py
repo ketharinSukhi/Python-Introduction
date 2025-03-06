@@ -21,13 +21,21 @@ name = input("what's your name? ")
 #hello(name)
 hello(name)"""
 
-def main():
+"""def main():
     name = input("what's your name? ")
     print(hello(name))
 def hello(to="world"):
     return f"hello, {to}"
 
 if __name__ == "__main__":
-   main()
+   main()"""
+
+def hello(n: int)-> str: #what the return value function is 
+    return "hello\n" * n
+
+number: int = int(input("Number: "))
+hellos: str = hello(number)
+
+print(hellos)
 
 
