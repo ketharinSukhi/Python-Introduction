@@ -30,12 +30,26 @@ def hello(to="world"):
 if __name__ == "__main__":
    main()"""
 
-def hello(n: int)-> str: #what the return value function is 
+"""def hello(n: int)-> str: #-> what the return value function is 
+    #hello n times
     return "hello\n" * n
 
 number: int = int(input("Number: "))
 hellos: str = hello(number)
 
-print(hellos)
+print(hellos, end="")"""
+
+import sys
+
+
+if len(sys.argv) == 1:
+    print("hello")
+elif len(sys.argv) == 3 and sys.argv[1] == "-n":
+    n = int(sys.argv[2])
+    for _ in range(n):
+        print("hello")
+else :
+    print("usage:hello.py")
+
 
 
