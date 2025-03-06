@@ -33,9 +33,9 @@ with open("students.csv","a") as file:
 #OOP Class Method Property
 class Student:
     def __init__(self, name, house, patronus):
-        if not name:
+        """if not name:
             raise ValueError("Missing name")
-        """if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw","Slytherin"]:
+        if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw","Slytherin"]:
             raise ValueError("Invalid house")"""
 
         self.name = name 
@@ -45,7 +45,14 @@ class Student:
     def __str__(self):
         return f"{self.name} from {self.house}"
 
+    @property
+    def name(self):
+        return self._name
 
+    @name.setter
+    def name(self, name):
+        if not name:
+            raise ValueError("Missing name")
 #Getter
     @property
     def house(self):
