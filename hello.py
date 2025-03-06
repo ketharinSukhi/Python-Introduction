@@ -39,7 +39,9 @@ hellos: str = hello(number)
 
 print(hellos, end="")"""
 
-import sys
+
+#sys
+"""import sys
 
 
 if len(sys.argv) == 1:
@@ -49,7 +51,16 @@ elif len(sys.argv) == 3 and sys.argv[1] == "-n":
     for _ in range(n):
         print("hello")
 else :
-    print("usage:hello.py")
+    print("usage:hello.py")"""
+
+import argparse
+
+parser = argparse.ArgumentParser(description="hello to the world")
+parser.add_argument("-n", default=1, help="number of times to  hello")
+args = parser.parse_args()
+
+for _ in range(args.n):
+    print("hello")
 
 
 
