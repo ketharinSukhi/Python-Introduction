@@ -23,17 +23,18 @@ for gryffindor in sorted(gryffindors, key=lambda s: s["name"]):
 for i, student in enumerate(students):
     print(i+1, student)"""
 
-#flock
+#flock yield
 def main():
   n = int(input("what's n? "))
   for s in sheep(n):
      print(s)
 
 def sheep(n):
-   flock = []
+   #flock = []
    for i in range(n):
-      flock.append("🍔" * i)
-   return flock
+      yield "🍔" * i
+      #flock.append("🍔" * i)
+   #return flock
 
 if __name__ == "__main__":
     main()
