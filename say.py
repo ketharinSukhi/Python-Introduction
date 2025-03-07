@@ -19,8 +19,17 @@ o = response.json()
 for result in o["results"]:
     print(result["trackName"])"""
 
-import sys
+""""import sys
 from module import hello # type: ignore
 
 if len(sys.argv) == 2:
-    hello(sys.argv[1])
+    hello(sys.argv[1])"""
+
+import cowsay
+import pyttsx3
+
+engine = pyttsx3.init()
+this = input ("what's this? ")
+cowsay.cow(this)
+engine.say(this)
+engine.runAndWait()
