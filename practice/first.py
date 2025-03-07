@@ -6,7 +6,7 @@ else:
  print("enter name")"""
 
 name = input("what is your name? ")
-print("\"my name is\"", sep=" ??")
-name= str.name.title
-print(f"{name}", end=".")
+print("my name is",end="? ")
+name = name.strip()
+print(f"{name}")
 
