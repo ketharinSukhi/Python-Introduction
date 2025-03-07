@@ -13,12 +13,13 @@ print(total(**coins), "Knuts") #unpacking"""
 
 f(galleons=100, sickles=50, knuts=25)"""
 
-#map
-def main():
+#map and list comprehensions
+def main(): 
     yell("This","is","CS50")
 
 def yell(*words):
-    uppercased = map(str.upper, words)
+    uppercased = [word.upper() for word in words]
+    #uppercased = map(str.upper, words)
     print(*uppercased)
 
 
