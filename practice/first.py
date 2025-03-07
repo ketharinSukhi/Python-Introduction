@@ -5,11 +5,13 @@ if str.isalpha(name):
 else:
  print("enter name")"""
 
-x =float(input("what is x ?"))
-y =float(input("what is y ?"))
+def hello():
+    print("hello,", name)
+hello()
+name = input("what's your name? ")
+  
 
-z=round(x/y, 3)
-print(f"{z:,}")
+
 
 
 
