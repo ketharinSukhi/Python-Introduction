@@ -5,8 +5,11 @@ if str.isalpha(name):
 else:
  print("enter name")"""
 
-name = input("what is your name? ").strip().title()
-first, last = name.split(" ")
-print("my name is",end=" ")
-print(f"{first}")
+x =int(input("what is x ?"))
+y =int(input("what is y ?"))
+
+z=x+y
+print(z)
+
+
 
