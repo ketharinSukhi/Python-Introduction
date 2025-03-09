@@ -14,13 +14,11 @@ def main():
    
 main()"""
 
-def hello(x):
-    print("hello ", x)
-def main():
-    name = input("what is your name? ")
-    return name
-user_name = main() 
-hello(user_name) 
+def hello(x, y):
+    return x+y
+
+print(hello(1,2))
+
 
 
  
