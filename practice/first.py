@@ -18,15 +18,21 @@ main()"""
 
 
 
-x = int(input("what is x? "))
-y = int(input("what is y? "))
+def main():
+    name = input("what is your name? ")
+    myName=value(name)
+    print("what is your opinio:\n", myName)
+def value(name):
+  match name:
+    case 100:
+      return "give me my money"
+    case 50:
+        return "half half"
+    case _:
+        return "keep it"
+main()
 
-if x>y:
-    print("x is greater than y")
-elif x<y:
-    print("x is less than y")
-else:
-    print("x is equal to y")
+    
 
 
  

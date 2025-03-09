@@ -27,7 +27,8 @@ def main():
     else:
         print("odd")
 def is_even(number):
-    return number%2 ==0 
+   #return True if number%2 ==0 else False
+   return number%2 ==0 
 main()
 
 #match
