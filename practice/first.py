@@ -19,13 +19,13 @@ main()"""
 
 
 def main():
-    name = input("what is your name? ")
-    myName=value(name)
-    print("what is your opinio:\n", myName)
-def value(name):
-  match name:
+    number = int(input("what is your number? "))
+    myNumber=value(number)
+    print("what is your opinio:\n", myNumber)
+def value(n):
+  match n:
     case 100:
-      return "give me my money"
+      return "give it to me"
     case 50:
         return "half half"
     case _:
