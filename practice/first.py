@@ -14,14 +14,19 @@ def main():
    
 main()"""
 
-def multiply(*numbers):
-    sum=0
-    for i in numbers:
-        sum += i
-    return sum
 
-print(multiply(2,3,4,5))
 
+
+
+x = int(input("what is x? "))
+y = int(input("what is y? "))
+
+if x>y:
+    print("x is greater than y")
+elif x<y:
+    print("x is less than y")
+else:
+    print("x is equal to y")
 
 
  
