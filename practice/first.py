@@ -14,7 +14,9 @@ def main():
    
 main()"""
 
+import random
 
-from random import choice
-coin = choice(["heads","tails"])
-print(coin)
+cards = ["jack","king","queen"]
+random.shuffle(cards)
+for card in cards:
+   print(card)
