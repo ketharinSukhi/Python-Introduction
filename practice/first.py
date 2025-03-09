@@ -15,17 +15,8 @@ def main():
 main()"""
 
 
-def main():
-    number = get_number()
-    hello(number)
+students = ["Hermione","Harry","Ron"]
 
-def get_number():
-    while True:
-        n = int(input("what's n?"))
-        if n > 0:
-         break
-    return n
-def hello(n):
-    for _ in range(n):
-        print("hello")
-main()
+
+for i in range(len(students)):
+    print(i+1, students[i])
