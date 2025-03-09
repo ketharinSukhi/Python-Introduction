@@ -5,10 +5,16 @@ if str.isalpha(name):
 else:
  print("enter name")"""
 
-def hello():
-    print("hello,", name)
-hello()
-name = input("what's your name? ")
+def main():
+    x = int(input("what is x ?"))
+    print(square(x))
+
+def square(x):
+    x = x*x
+    return x
+
+main()
+ 
   
 
 
