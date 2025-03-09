@@ -14,10 +14,13 @@ def main():
    
 main()"""
 
-def hello(x, y):
-    return x+y
+def multiply(*numbers):
+    sum=0
+    for i in numbers:
+        sum += i
+    return sum
 
-print(hello(1,2))
+print(multiply(2,3,4,5))
 
 
 
