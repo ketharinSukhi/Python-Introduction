@@ -18,27 +18,6 @@ main()"""
 
 
 
-def main():
-    number = int(input("what is your number? "))
-    myNumber=value(number)
-    print("what is your opinio:\n", myNumber)
-def value(n):
-  match n:
-    case 100:
-      return "give it to me"
-    case 50:
-        return "half half"
-    case _:
-        return "keep it"
-main()
 
-    
-
-
- 
-  
-
-
-
-
-
+for i in range(3):
+    print("hello")
