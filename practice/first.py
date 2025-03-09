@@ -5,20 +5,24 @@ if str.isalpha(name):
 else:
  print("enter name")"""
 
-def select(x, y):
-    if x >y:
-        print("x is greater than y")
-    elif x<y:
-        print("x is smaller than y")
-    else:
-        print("x is equal to y")
+"""def select(b):
+    print(f"my name is {b}")
+    
 def main():
-    x = input("what is x ?")
-    y = input("what is y ?")
-    select(x, y)
+    x = str(input("what is your name ? "))
+    select(x)
    
+main()"""
 
-main()
+def hello(x):
+    print("hello ", x)
+def main():
+    name = input("what is your name? ")
+    return name
+user_name = main() 
+hello(user_name) 
+
+
  
   
 
