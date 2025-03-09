@@ -15,9 +15,17 @@ def main():
 main()"""
 
 
+def main():
+    number = get_number()
+    hello(number)
 
-
-
-
-for i in range(3):
-    print("hello")
+def get_number():
+    while True:
+        n = int(input("what's n?"))
+        if n > 0:
+         break
+    return n
+def hello(n):
+    for _ in range(n):
+        print("hello")
+main()
