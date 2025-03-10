@@ -16,7 +16,7 @@ main()"""
 
 
 
-import json
+"""import json
 import requests
 import sys
 
@@ -27,4 +27,15 @@ response=requests.get("https://itunes.apple.com/search?entity=song&limit=50&term
 
 o = response.json()
 for result in o["results"]:
-    print(result["trackName"])
+    print(result["trackName"])"""
+
+import requests
+base_url="https://pokeapi.co/api/v2/"
+
+def get_info(name):
+    url =f"{base_url}/pokemon/{name}"
+    response = requests.get(url)
+    print(response)
+
+poke_name = "pikachu"
+get_info(poke_name) 
