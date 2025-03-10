@@ -16,6 +16,7 @@ with open("names.txt","a") as file:
 file.close()"""
 
 """with open("names.txt","r") as file:
+     #lines = file.readlines()
     for line in file:
       print("hello, " ,line.rstrip())"""
 
