@@ -14,8 +14,10 @@ if __name__ == "__main__":
 
 import sys
 
-try:
-    print("hello :", sys.argv[1])
-except IndexError:
-    print("Invalid")
+if len(sys.argv)<2:
+    print("Too few arguments")
+elif len(sys.argv)>2:
+    print("Too many arguments")
+
+print("hello", sys.argv[1])
 
