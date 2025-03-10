@@ -14,10 +14,8 @@ if __name__ == "__main__":
 
 import sys
 
-def main():
-  ok=sys()
-  print("Hello", ok)
+try:
+    print("hello :", sys.argv[1])
+except IndexError:
+    print("Invalid")
 
-def sys(): 
- for i in range(2):
-   print(sys.argv[i+1])
