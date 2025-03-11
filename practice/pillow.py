@@ -1,3 +1,5 @@
+""" 
+
 from PIL import Image, ImageDraw, ImageFont
 
 image1 =Image.open('image1.jpg')
@@ -34,3 +36,19 @@ blurred = image1.filter(ImageFilter.BLUR)
 blurred.show() 
 sharpened = image1.filter(ImageFilter.SHARPEN) 
 sharpened.show()
+
+
+
+"""
+import sys
+from PIL import Image
+images = []
+for arg in sys.argv [1:]:
+    image = Image. open (arg)
+    images. append (image)
+10
+12
+images [0]. save(
+     images= "images.gif", save_all=True, append_images=[images[1]], duration=200, Loop=0)
+
+images.show()
