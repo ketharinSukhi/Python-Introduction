@@ -8,13 +8,14 @@
 
 class Car:
     
-    def __init__(self, name):
+    def __init__(self, name, color):
         self.name = name
+        self.color = color
         print("creating car")
     
    
 #the store name for variable called attributes
-car = Car("BMW")
+car = Car("BMW","red")
 print(car.name)
 car1 = Car("TOYOTA")
 print(car1.name)
