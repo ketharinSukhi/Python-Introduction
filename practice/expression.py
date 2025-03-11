@@ -1,10 +1,9 @@
 import re
+email = input("what's your email? ").strip()
 
-email = input("Enter your email").strip()
+username, domain = email.split("@")
 
-username, domain = email.split("@") 
-
-if username and domain.endswith(".com"):
-    print("Valid")
+if re.search(r"^(\w|\.)+@(\w+\.)?\w+\.com$", email, re.IGNORECASE): #\w=[a-zA-Z0-9_]
+    print("valid")
 else:
     print("Invalid")
