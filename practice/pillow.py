@@ -1,10 +1,11 @@
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 image1 =Image.open('image1.jpg')
-#show image
+
+# Create a drawing object
+draw = ImageDraw.Draw(image1)
+
+# Add text (requires a font file)
+draw.text((20, 20), "Hello!", fill="green")
+
 image1.show()
-#save in png 
-image1.save('image_1.png')
-#Resizing an Image (width, height)
-resized_image = image1.resize((300, 300))
-resized_image.show()
