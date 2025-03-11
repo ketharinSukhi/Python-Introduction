@@ -1,21 +1,14 @@
-class Student:
-    def __init__(self, name, house):
+#create class
+#class student:
+   # name ="sukhi"
 
-        self.name = name 
-        self.house = house
-  
+#creating object(instance)
+#s1= student()
+#print(s1.name)
 
-    def __str__(self):
-        return f"{self.name} from {self.house}"
-    
-    @classmethod
-    def get(cls):
-          name = input("Name: ")
-          house = input("House: ")
-          return cls(name, house) 
+class Car:
+    car1="red"
+    brand ="BMW"
 
-def main():
-    student= Student.get()
-    print(student)
-
-
+car = Car()
+print(car.car1)
