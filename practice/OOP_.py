@@ -7,7 +7,12 @@
 #print(s1.name)
 
 class Car:
-    
+    #default constructor only self parameter
+    def __init__(self):
+       
+        print("creating car")
+
+    #parameterized constructors
     def __init__(self, name, color):
         self.name = name
         self.color = color
