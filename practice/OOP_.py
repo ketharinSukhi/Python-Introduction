@@ -16,6 +16,6 @@ class Car:
    
 #the store name for variable called attributes
 car = Car("BMW","red")
-print(car.name)
-car1 = Car("TOYOTA")
-print(car1.name)
+print(car.name, car.color)
+car1 = Car("TOYOTA","Green")
+print(car1.name, car1.color)
