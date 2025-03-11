@@ -7,8 +7,12 @@
 #print(s1.name)
 
 class Car:
-    car1="red"
-    brand ="BMW"
+    
+    def __init__(self, fullname):
+        self.name = fullname
+        print("creating car")
+    
+   
 
-car = Car()
-print(car.car1)
+car = Car("BMW")
+print(car.name)
