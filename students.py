@@ -31,7 +31,7 @@ with open("students.csv","a") as file:
     writer.writerow({"name": name, "home":home})"""
 
 #OOP Class Method Property
-class Student:
+"""class Student:
     def __init__(self, name, house, patronus):
         
         self.name = name 
@@ -85,7 +85,7 @@ def get_student():
     return Student(name, house, patronus)
 
 if __name__ =="__main__":
-    main()
+    main()"""
 
 #student
 
@@ -95,7 +95,6 @@ class Student:
         self.name = name 
         self.house = house
   
-
     def __str__(self):
         return f"{self.name} from {self.house}"
     
