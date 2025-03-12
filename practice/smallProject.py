@@ -25,7 +25,8 @@ class Account:
     def __init__(self, bal, acc):
         self.balance = bal
         self.account = acc
-        print("my account number",self.acc)
+        print("my account is ", self.account)
+        
 
     def debit(self, amount):
         self.balance -=amount
@@ -37,10 +38,11 @@ class Account:
         print("credit amount",amount)
         print("total balance",self.balance)
 
-    def get_balace(self):
-        return self.balance
+   
+        
+        
 
 acc1 = Account(10000, 1234)
-
 acc1.debit(500)
 acc1.credit(1000)
+
