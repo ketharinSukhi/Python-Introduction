@@ -85,6 +85,7 @@ class ToyotaCar(Car):
     def __init__(self, name, type):
         self.name = name
         super().__init__(type)
+        super().start()
 
 """class Fortuner(ToyotaCar):
     def __init__(self, type):
