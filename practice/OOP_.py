@@ -19,12 +19,16 @@ class Student:
     def __init__(self, name, marks):
         self.name = name
         self.marks = marks
-        print("adding new student")
+    #method function
+    def welcome(self):
+        print("welcom students", self.name)
+
+    def get_marks(self):
+        return self.marks
     
    
 #the store name for variable called attributes
 s1 = Student("Edward",75)
-print(s1.name, s1.marks)
-s2 = Student("Toya",80)
-print(s2.name, s2.marks)
-print()
+
+s1.welcome()
+print(s1.get_marks())
