@@ -31,4 +31,6 @@ class Student:
 s1 = Student("Edward",75)
 
 s1.welcome()
-print(s1.get_marks())
+print(s1.get_marks()) 
+
+
