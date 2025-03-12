@@ -46,16 +46,19 @@ s1.get_average()"""
 acc1 = Account(10000, 1234)
 acc1.debit(500)
 acc1.credit(1000)"""
-
-class Account:
+#private method and attribute
+""""class Account:
     def __init__(self, acc_no, acc_pass):
         self.account = acc_no
         # to make it private use two under score before __
         self.__password = acc_pass
 
-    #private method
-    def __hello():
+    #private method __
+    def __hello(self):
         print("hello")
+
+    def welcom(self):
+        self.__hello()
    
     def reset_pass(self):
         print(self.__password)
@@ -63,7 +66,17 @@ class Account:
 acc1 = Account(12345,"abcd")
 
 print(acc1.account)
-print(acc1.reset_pass())
+print(acc1.reset_pass())"""
+
+#Inheritance
+
+class Car:
+    @staticmethod
+    def start():
+        print("Car started")
+    @staticmethod
+    def stop():
+        print("Car stop")
 
         
 
