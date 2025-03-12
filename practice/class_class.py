@@ -18,7 +18,7 @@ print(p1.name)
 print(Person.name)"""
 
 #property
-class Student:
+"""class Student:
     def __init__(self, phy, chem, math):
        self.phy = phy
        self.chem = chem
@@ -30,6 +30,18 @@ class Student:
 stu1 = Student(76, 54, 70)
 print(stu1.percentage)
 stu1.chem = 75
-print(stu1.percentage)
+print(stu1.percentage)"""
 
+class Complex:
+    def __init__(self, real, img):
+        self.real = real
+        self.img =img
+
+    def showNumber(self):
+        print(self.real,"i+", self.img,"j")
+
+num1 = Complex(1, 3)
+num1.showNumber()
+num2 = Complex(4, 5)
+num2.showNumber()
 
