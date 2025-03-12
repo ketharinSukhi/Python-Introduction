@@ -68,15 +68,55 @@ acc1 = Account(12345,"abcd")
 print(acc1.account)
 print(acc1.reset_pass())"""
 
-#Inheritance
-
+#single Inheritance
+#multi-level Inheritance
 class Car:
+
+    def __init__(self, type):
+        self.type =type
     @staticmethod
     def start():
         print("Car started")
     @staticmethod
     def stop():
-        print("Car stop")
+        print("Car ped")
 
-        
+class ToyotaCar(Car):
+    def __init__(self, name, type):
+        self.name = name
+        super().__init__(type)
+
+"""class Fortuner(ToyotaCar):
+    def __init__(self, type):
+        self.type = type"""
+
+car1 = ToyotaCar("diesel", "manual")
+print(car1.type)
+
+#multiple Inheritance
+
+"""class A:
+    varA = "class A"
+class B:
+    varB = "class B"
+
+class C(A, B):
+
+    varC = "class C"
+
+c1=C()
+
+print(c1.varC)
+print(c1.varB)
+print(c1.varA)"""
+    
+
+
+
+
+
+
+
+
+
 
