@@ -52,6 +52,10 @@ class Account:
         self.account = acc_no
         # to make it private use two under score before __
         self.__password = acc_pass
+
+    #private method
+    def __hello():
+        print("hello")
    
     def reset_pass(self):
         print(self.__password)
