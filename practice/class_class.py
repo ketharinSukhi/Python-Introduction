@@ -31,7 +31,7 @@ stu1 = Student(76, 54, 70)
 print(stu1.percentage)
 stu1.chem = 75
 print(stu1.percentage)"""
-
+#polymorphism
 class Complex:
     def __init__(self, real, img):
         self.real = real
@@ -39,9 +39,17 @@ class Complex:
 
     def showNumber(self):
         print(self.real,"i+", self.img,"j")
+    #dunder function
+    def __add__(self, num2):
+        newReal = self.real + num2.real
+        newImg = self.img + num2.img
+        return Complex(newReal, newImg)
+
 
 num1 = Complex(1, 3)
 num1.showNumber()
 num2 = Complex(4, 5)
 num2.showNumber()
 
+num3 = num1 + num2
+num3.showNumber()
