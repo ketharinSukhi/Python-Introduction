@@ -19,17 +19,28 @@ s1 = Student("Tina",[67, 80, 95])
 s1.get_average()"""
 
 #abstraction
+#encapsulation
 
-class Car:
-    def __init__(self):
-        self.acc = False
-        self.brk = False
-        self.clutch = False
-    
-    def start(self):
-        self.clutch = True
-        self.acc =True
-        print("start the car..")
+class Account:
+    def __init__(self, bal, acc):
+        self.balance = bal
+        self.account = acc
+        print("my account number",self.acc)
 
-car1 = Car()
-car1.start()
+    def debit(self, amount):
+        self.balance -=amount
+        print("debited amount",amount)
+        print("total balance",self.balance)
+
+    def credit(self, amount):
+        self.balance +=amount
+        print("credit amount",amount)
+        print("total balance",self.balance)
+
+    def get_balace(self):
+        return self.balance
+
+acc1 = Account(10000, 1234)
+
+acc1.debit(500)
+acc1.credit(1000)
