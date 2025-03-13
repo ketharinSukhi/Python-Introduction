@@ -3,19 +3,46 @@ import csv
 
 class Book:
 
+    FILE_NAME = "book.csv"
+
     def __init__(self, book_name):
         
         self.name = book_name
 
     @staticmethod
     def add(name):
-        with open("Book.csv", "a", newline="") as file:
+        with open("Book.FILE_NAME", "a", newline="") as file:
             writer = csv.writer(file)
             writer.writerow([name])
         print(f"{name} Book is added in the list")
+
+
+
     @staticmethod
-    def update():
-        print("Book is updated in the list")
+    def update(old_name, new_name):
+        books = []
+        updated = False
+        with open("Book.FILE_NAME", "r", newline="") as file:
+           reader = csv.reader(file)
+           for row in reader:
+                if row and row[0] == old_name:
+                    #replace old name with new name
+                    books.append([new_name])
+                    updated = True
+                else:
+                    books.append(row)
+
+        # write back the updated list to the file
+        if updated:
+            with open("Book.FILE_NAME", "r", newline="") as file:
+                writer = csv.writer(file)
+                writer.writerows(books)
+            print(f'"{old_name}" has been updated to "{new_name}".')
+        else:
+            print(f'Book "{old_name}" not found.')
+
+
+
     @staticmethod
     def delete():
         print("Book is deleted from the list")
@@ -30,7 +57,8 @@ class Book:
              name = Book.add(name)
              return name
         case 2:
-            name = input("Enter the book name for update: ")
+            old_name = input("Enter the current book name: ")
+            new_name = input("Enter the new book name: ")
             name = Book.update()
             return name
         case 3:
