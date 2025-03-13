@@ -30,12 +30,17 @@ def add(a, b):
     return a + b
 
 print(add.__doc__) 
+
 #argparse
-import argparse
+"""import argparse
 
 parser = argparse.ArgumentParser(description="numbers of time to say hello")
 parser.add_argument("-n", default=3,type=int)
 args = parser.parse_args()
 
 for _ in range(int(args.n)):
-    print("hello")
+    print("hello")"""
+
+#unpacking
+
+data = (2,3,4,5)
