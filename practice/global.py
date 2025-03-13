@@ -1,4 +1,4 @@
-class Account:
+"""class Account:
     def __init__(self):
         self._balance = 100
 
@@ -22,4 +22,15 @@ def main():
     print("Balance:", account.balance)
 
 if __name__ =="__main__":
-    main()
+    main()"""
+
+#docstring
+def add(a, b):
+    """Returns the sum of two numbers."""
+    return a + b
+
+print(add.__doc__) 
+
+import sys
+
+print(len(sys.argv))
