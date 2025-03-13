@@ -11,7 +11,7 @@ class Book:
 
     @staticmethod
     def add(name):
-        with open("Book.FILE_NAME", "a", newline="") as file:
+        with open(Book.FILE_NAME, "a", newline="") as file:
             writer = csv.writer(file)
             writer.writerow([name])
         print(f"{name} Book is added in the list")
@@ -22,7 +22,7 @@ class Book:
     def update(old_name, new_name):
         books = []
         updated = False
-        with open("Book.FILE_NAME", "r", newline="") as file:
+        with open(Book.FILE_NAME, "r", newline="") as file:
            reader = csv.reader(file)
            for row in reader:
                 if row and row[0] == old_name:
@@ -34,7 +34,7 @@ class Book:
 
         # write back the updated list to the file
         if updated:
-            with open("Book.FILE_NAME", "r", newline="") as file:
+            with open(Book.FILE_NAME, "w", newline="") as file:
                 writer = csv.writer(file)
                 writer.writerows(books)
             print(f'"{old_name}" has been updated to "{new_name}".')
@@ -55,6 +55,7 @@ class Book:
         case 1:
              name = input("Enter the book name for add: ")
              name = Book.add(name)
+             return name
             
         case 2:
             old_name = input("Enter the current book name: ")
