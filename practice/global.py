@@ -73,8 +73,9 @@ if __name__ == "__main__":
      main()
 
 
-#map
-numbers = ["1", "2", "3", "4"]
-int_numbers = list(map(int, numbers))
+#enumerate
 
-print(int_numbers)
+students =["sukhi","raina","sagrey"]
+
+for i in students:
+    print(i+1, students[i])
