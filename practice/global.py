@@ -30,7 +30,12 @@ def add(a, b):
     return a + b
 
 print(add.__doc__) 
+#argparse
+import argparse
 
-import sys
+parser = argparse.ArgumentParser()
+parser.add_argument("-m")
+args = parser.parse_args()
 
-print(len(sys.argv))
+for _ in range(int(args.n)):
+    print("hello")
