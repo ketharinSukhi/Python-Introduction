@@ -11,7 +11,7 @@ class Account:
     def deposit(self,n):
         self._balance +=n
         print("Total Balance: ", self.balance)
-
+        
     def withdraw(self, n):
         self._balance -=n
 
