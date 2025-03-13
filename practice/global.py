@@ -43,4 +43,17 @@ for _ in range(int(args.n)):
 
 #unpacking
 
-data = (2,3,4,5)
+def add(a, b, c):
+    return a + b + c
+
+numbers = (5, 10, 15)
+print(add(*numbers))
+
+#unpacking
+
+def total(galleons, sickles, knuts):
+    return (galleons * 17 + sickles) * 29 + knuts
+
+coins = {"galleons": 100, "sickles": 50, "knuts": 25}
+
+print(total(**coins), "Knuts")
