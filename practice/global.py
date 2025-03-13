@@ -71,3 +71,10 @@ def yell(*words):
 
 if __name__ == "__main__":
      main()
+
+
+#map
+numbers = ["1", "2", "3", "4"]
+int_numbers = list(map(int, numbers))
+
+print(int_numbers)
