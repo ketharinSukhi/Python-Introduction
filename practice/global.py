@@ -77,5 +77,5 @@ if __name__ == "__main__":
 
 students =["sukhi","raina","sagrey"]
 
-for i in students:
-    print(i+1, students[i])
+for i, students in enumerate(students):
+    print(i+1, students)
