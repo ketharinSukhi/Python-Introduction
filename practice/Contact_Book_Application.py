@@ -55,21 +55,21 @@ class Book:
         case 1:
              name = input("Enter the book name for add: ")
              name = Book.add(name)
-             return name
+            
         case 2:
             old_name = input("Enter the current book name: ")
             new_name = input("Enter the new book name: ")
-            name = Book.update()
-            return name
+            Book.update(old_name, new_name)
+            
         case 3:
 
             name = input("Enter the book name for update: ")
             name = Book.delete()
-            return name
+            
         case 4:
             name = input("Enter the book name for update: ")
             name = Book.search_contacts()
-            return name
+            
         case _:
               print("Invalid")
 
