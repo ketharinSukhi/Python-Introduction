@@ -33,8 +33,8 @@ print(add.__doc__)
 #argparse
 import argparse
 
-parser = argparse.ArgumentParser()
-parser.add_argument("-m")
+parser = argparse.ArgumentParser(description="numbers of time to say hello")
+parser.add_argument("-n", default=3,type=int)
 args = parser.parse_args()
 
 for _ in range(int(args.n)):
