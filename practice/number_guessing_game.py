@@ -21,9 +21,9 @@ def play_game():
                 print(f"Guess a number between {start} and {end}:")
 
             elif guess < random_number:
-                print("Invalid Guess, Too low !!")
+                print("Too low !!")
             elif guess > random_number:
-                print("Invalid Guess, Too high !!")
+                print("Too high !!")
             else:
                 print(f"Congratulations! You guessed the number {random_number} in {attempts} attempts.")
                 break
