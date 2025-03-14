@@ -4,9 +4,7 @@ import csv
 class Book:
 
     FILE_NAME = "book.csv"
-
-    def __init__(self, book_name):
-        
+    def __init__(self, book_name):      
         self.name = book_name
 
     @staticmethod
@@ -15,8 +13,6 @@ class Book:
             writer = csv.writer(file)
             writer.writerow([name])
         print(f"{name} Book is added in the list")
-
-
 
     @staticmethod
     def update(old_name, new_name):
@@ -40,8 +36,6 @@ class Book:
             print(f'"{old_name}" has been updated to "{new_name}".')
         else:
             print(f'Book "{old_name}" not found.')
-
-
 
     @staticmethod
     def delete(name):
@@ -79,6 +73,7 @@ class Book:
             print(f'Book "{name}" is in the list.')
         else:
             print(f'Book "{name}" not found.')
+
     @staticmethod
     def options(criteria):
       match criteria:
@@ -107,7 +102,6 @@ class Book:
 def main():
    print("Choose:")
    print(" 1 for add books\n 2 for update books \n 3 for delete books \n 4 for search contacts")
-
    criteria = int(input("Enter your number: "))
    Book.options(criteria)
                     
