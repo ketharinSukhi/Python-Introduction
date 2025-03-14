@@ -35,6 +35,13 @@ def save_to_file(city):
 
 
 def display_search():
+    try:
+        with open("weather_history.txt", "r") as file:
+            searches = file.readlines()
+            searches = [re.sub(r'\n', '', city) for city in searches]  # Removing newlines
+            return "Recent Searches: " + ", ".join(searches)
+    except FileNotFoundError:
+        return "No recent searches found."
 
 def main():
    city = input ("Enter the city name: ")
