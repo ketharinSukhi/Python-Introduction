@@ -17,6 +17,12 @@ def get_weather(city):
         city_name = data["name"]
         country = data["sys"]["country"]
 
+        weather_info = (f"Weather in {city_name}, {country}: {weather_desc}\n"
+                        f"Temperature: {temp}°C\n"
+                        f"Humidity: {humidity}%")
+        save_to_file(city)  
+        return weather_info
+
 def save_to_file(city):
 
 
