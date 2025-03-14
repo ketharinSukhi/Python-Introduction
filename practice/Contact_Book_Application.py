@@ -43,7 +43,42 @@ class Book:
 
 
 
-   
+    @staticmethod
+    def delete(name):
+        books = []
+        deleted = False
+
+        with open(Book.FILE_NAME, "r", newline="") as file:
+            reader = csv.reader(file)
+            for row in reader:
+                if row and row[0] == name:
+                    deleted = True  # Skip this book (delete)
+                else:
+                    books.append(row)
+
+        if deleted:
+            with open(Book.FILE_NAME, "w", newline="") as file:
+                writer = csv.writer(file)
+                writer.writerows(books)
+            print(f'"{name}" has been deleted from the list.')
+        else:
+            print(f'Book "{name}" not found.')
+        
+    @staticmethod
+    def search_contacts(name):
+        found = False
+
+        with open(Book.FILE_NAME, "r", newline="") as file:
+            reader = csv.reader(file)
+            for row in reader:
+                if row and row[0] == name:
+                    found = True
+                    break
+
+        if found:
+            print(f'Book "{name}" is in the list.')
+        else:
+            print(f'Book "{name}" not found.')
     @staticmethod
     def options(criteria):
       match criteria:
