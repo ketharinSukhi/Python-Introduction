@@ -3,8 +3,10 @@ import json
 import re
 
 def get_weather(city):
+    api_key ="Mymensingh"
+    base_url ="http://api.openweathermap.org/data/2.5/weather"
+    weather ={"q": city, "appid": api_key, "units": "metric"}
 
-    
 
 def save_to_file(city):
 
