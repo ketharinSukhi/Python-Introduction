@@ -7,8 +7,9 @@ class ToDoList:
 
         
     def add_tasks(self, task_description):
+        self.tasks.append({"task_description": task_description, "completed":False})
+        self.save_task()
         
-        print("")
 
     def mark_task_completed(self):
         print("")
@@ -19,7 +20,14 @@ class ToDoList:
     def save_task(self):
         print("")
 
-    def show_task(self.):
+    def show_task(self):
+        if not self.tasks:
+            print("No tasks available")
+
+        else:
+            for i, task in enumerate(self.tasks):
+                status = "✔" if task["completed"] else "✘"
+                print(f"{i + 1}. [{status}] {task['task_description']}")
 
        
 
@@ -31,13 +39,13 @@ class ToDoList:
             ToDoList.add_tasks(task)
             
         case 2:
-            mark_task_completed()
+            print("")
             
         case 3:
-            delete_task()
+            print("")
             
         case 4:
-            save_task()
+           print("")
              
         case _:
               print("Invalid")
@@ -49,7 +57,7 @@ def main():
    "3 for delete books \n "
    "4 for search contacts")
    criteria = int(input("Enter your number: "))
-   Book.options(criteria)
+   ToDoList.options(criteria)
                     
 
 if __name__ == "__main__":
