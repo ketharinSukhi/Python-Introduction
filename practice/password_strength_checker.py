@@ -8,6 +8,15 @@ def check_password_strength(password):
         'digit': bool(re.search(r'\d', password)),
         'special_char': bool(re.search(r'[!@#$%^&*(),.?":{}|<>]', password))
     }
+    
+     strength_score = sum(strength_criteria.values())
+    
+     if strength_score == 5:
+        return "Strong"
+     elif strength_score >= 3:
+        return "Moderate"
+     else:
+        return "Weak"
      
 def main():
     password = input("Enter your password: ")
