@@ -7,8 +7,7 @@ class Question:
     def check_answer(self, given_answer):
 
         return self.answer.lower() == given_answer.lower()
-        
-        
+             
 class Quiz:
     def __init__(self, file_path):
         self.questions = self.questions_load(file_path)
