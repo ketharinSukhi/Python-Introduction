@@ -61,6 +61,6 @@ args = parser.parse_args()
 
 for _ in range(args.n):
     print("hello")
-
+#runs python script.py --help
 
 
