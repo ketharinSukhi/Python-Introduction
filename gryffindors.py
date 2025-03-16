@@ -17,7 +17,7 @@ gryffindors = filter(lambda s: s["house"] == "Gryffindor", students)
 for gryffindor in sorted(gryffindors, key=lambda s: s["name"]):
    print(gryffindor["name"])"""
 
-#Enumerate
+#Enumerate : used to count 
 """students = ["Hermione","Harry","Ron"]
 
 for i, student in enumerate(students):

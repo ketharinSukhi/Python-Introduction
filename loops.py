@@ -1,10 +1,10 @@
-
+#for loop
 """
 i=0
 while i<4:
  print("hello")
  i+=1"""
-
+#while loop
 """while True:
   n = int(input("what's n? "))
   if n>0:

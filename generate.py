@@ -33,7 +33,7 @@ for arg in sys.argv[1:]:
 
 #terminal - python generate.py Ketharin Sukhi"""
 
-import random
+
 
   
 
