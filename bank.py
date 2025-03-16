@@ -1,8 +1,7 @@
 #Global variable
 class Account:
     def __init__(self):
-        self._balance = 100
-
+        self._balance = 1000
 
     @property
     def balance(self):
@@ -10,7 +9,7 @@ class Account:
     
     def deposit(self,n):
         self._balance +=n
-        print("Total Balance: ", self.balance)
+        print("Total Balance:",self.balance)
         
     def withdraw(self, n):
         self._balance -=n

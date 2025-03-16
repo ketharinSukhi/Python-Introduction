@@ -7,7 +7,7 @@ print(f"{z:,}")
 f=(x/y)
 print(f"{f:.2f}")
 
-#print(int(input("what's x ")) + int(input("what's y ")))"""
+print(int(input("what's x ")) + int(input("what's y ")))"""
 
 def main():
     x=int(input("what's x "))
@@ -15,6 +15,7 @@ def main():
 
 def square(n):
     return n * n
+    #return pow(n, n)
 
 if __name__ == "__main__":
    main()
