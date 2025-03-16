@@ -8,7 +8,7 @@ class Hat:
         print(name, "is in", random.choice(cls.houses))
 Hat.sort("Harry")"""
 
-
+#class method
 class Wizard:
     def __init__(self, name):
          if not name:
