@@ -25,16 +25,27 @@ class Quiz:
             print("Error: Quiz file not found")
             return []
         return questions
- 
-
-
     
+    def run_quiz(self):
 
+        for question in self.questions :
+            while True:
+                try:
+                  given_answer = input(f"{question.text}").strip()
+                  if not given_answer:
+                      raise ValueError("Input cannot be empty!")
+                  break
+                except ValueError as e :
+                    print(e)
 
+            if question.check_answer(given_answer):
+                print("✅ Correct!")  
+                self.score +=1
+            else:
+                print(f"❌ Wrong! The correct answer is {question.answer}")
 
-
-
-
+        print(f"\n🎉 Quiz Completed! Your final score: {self.score}/{len(self.questions)}") 
+ 
 
 quiz =Quiz("Quiz.txt")
 quiz.run_quiz()
