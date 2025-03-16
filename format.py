@@ -6,6 +6,7 @@ if matches:= re.search(r"^(.+), (.+)$", name):
     name = matches.group(2) + " " + matches.group(1)
 print(f"hello,{name}")"""
 
+#regular expression
 #facebook URL
 import re
 url = input("URL : ").strip()
