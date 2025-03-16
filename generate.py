@@ -22,8 +22,8 @@ for card in cards:
    print(card)
 print(coin, number)"""
 
-#average
-import sys
+#print name taking inpur from terminal
+"""import sys
 
 if len(sys.argv)<2 :
   sys.exit("too few arguments")
@@ -31,7 +31,9 @@ if len(sys.argv)<2 :
 for arg in sys.argv[1:]:
   print("hello, my name is", arg)
 
-#terminal - python generate.py Ketharin Sukhi
+#terminal - python generate.py Ketharin Sukhi"""
+
+import random
 
   
 
