@@ -14,6 +14,19 @@ class Quiz:
         self.questions = self.questions_load(file_path)
         self.score = 0
 
+    def questions_load(self, file_path):
+        questions = []
+        try:
+            with open(file_path, "r") as file:
+                for line in file:
+                    text, answer = line.strip().split(",")
+                    questions.append(Question(text, answer))
+        except FileNotFoundError:
+            print("Error: Quiz file not found")
+            return []
+        return questions
+ 
+
 
     
 
