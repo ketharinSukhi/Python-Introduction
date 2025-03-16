@@ -3,6 +3,10 @@ class Question:
     def __init__(self, text, answer):
         self.text = text
         self.answer = answer
+
+    def check_answer(self, given_answer):
+
+        return self.answer.lower() == given_answer.lower()
         
         
 class Quiz:
