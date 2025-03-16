@@ -1,13 +1,6 @@
 """x=int(input("what's x "))
 y=int(input("what's y "))
 
-if x < y:
-    print("x is less than y")
-elif x > y:
-    print("x is greater than y")
-else:
-    print("x is equal to y") 
-
 score = int(input("score : "))
 if 90 <= score <= 100:
     print("Grade:A")
@@ -19,10 +12,11 @@ elif 60 <= score < 70:
     print("Grade:D")
 else:
     print("Grade:F")"""
+
 #using boolean
 def main():
     number =int(input("what's number?"))
-    if is_even(number):
+    if is_even(number) is True:
         print("even")
     else:
         print("odd")
@@ -34,7 +28,7 @@ main()
 #match
 name = input("what's your name: ")
 match name:
-    case "Harry" | "Hermione" | "Ron":
+    case "Harry" | "Hermione" | "Ron" | "Jenny":
         print("Gryffindor")
     case "Draco":
         print("Slytherin")
