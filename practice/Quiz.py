@@ -46,6 +46,5 @@ class Quiz:
 
         print(f"\n🎉 Quiz Completed! Your final score: {self.score}/{len(self.questions)}") 
  
-
 quiz =Quiz("Quiz.txt")
 quiz.run_quiz()
