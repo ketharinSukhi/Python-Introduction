@@ -18,8 +18,8 @@ def main():
     call("This","is","CS50")
 
 def call(*words):
-    uppercased = [word.upper() for word in words]
-    #uppercased = map(str.upper, words)
+    #uppercased = [word.upper() for word in words]
+    uppercased = map(str.upper, words)
     print(*uppercased)
 
 
