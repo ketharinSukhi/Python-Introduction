@@ -7,8 +7,18 @@ with open("file.txt","r") as file:
     for line in file:
       print("hello, " ,line.rstrip())"""
 
+
+#save file
+i = int(input("The number of item you want to add : "))
+
+with open("file.txt","a") as file:
+
+    for _ in range(i):
+        name = input("Enter your name : ")
+        file.write(f"{name}\n")
+
 #csv write
-import csv
+"""import csv
 
 name = input("what your name? ")
 home = input("where's your home? ")
@@ -29,4 +39,4 @@ with open("students.csv") as file:
         students.append({"name": row["name"], "home":row["home"]})
 
 for student in sorted(students, key=lambda student: student["name"]):
-    print(f"{student['name']} is from {student['home']}")
+    print(f"{student['name']} is from {student['home']}")"""
