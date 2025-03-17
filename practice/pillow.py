@@ -54,3 +54,7 @@ frames[0].save(
      duration = 500,
      loop=0
 )
+gif = Image.open("animated.gif")
+gif.show()
+
+print("Gif created successfully")
