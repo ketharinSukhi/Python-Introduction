@@ -40,15 +40,17 @@ sharpened.show()
 
 
 """
-import sys
+#GIF
 from PIL import Image
-images = []
-for arg in sys.argv [1:]:
-    image = Image. open (arg)
-    images. append (image)
-10
-12
-images [0]. save(
-     images= "images.gif", save_all=True, append_images=[images[1]], duration=200, Loop=0)
 
-images.show()
+image_files =["image1.jpg", "image2.jpg", "image3.jpg"]
+
+frames =[Image.open(img).convert("RGBA") for img in image_files]
+
+frames[0].save(
+    "animated.gif",
+     save_all = True,
+     append_images = frames[1:],
+     duration = 500,
+     loop=0
+)
