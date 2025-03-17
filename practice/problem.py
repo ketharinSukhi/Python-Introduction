@@ -1,5 +1,6 @@
-import re
-text = "Python is great!"
-match = re.match(r"Python", text)
-if match:
-    print("Match found at the beginning!")
+num = int(input("Enter a number to see its times table: "))
+
+
+print(f"Times Table of {num}:")
+for i in range(1, 11):
+    print(f"{num} x {i} = {num * i}")
