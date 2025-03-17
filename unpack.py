@@ -8,10 +8,10 @@ coins = {"galleons": 100, "sickles": 50, "knuts": 25}
 print(total(**coins), "Knuts") #unpacking
 
 #args and kwargs
-"""def f(*args, **kwargs):
+def f(**kwargs):
     print("Positional: ", kwargs)
 
-f(galleons=100, sickles=50, knuts=25)"""
+f(galleons=100, sickles=50, knuts=25)
 
 #map and list comprehensions
 """def main(): 
