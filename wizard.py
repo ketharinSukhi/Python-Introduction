@@ -25,7 +25,7 @@ class Student(Wizard):
     ...
 
 class Professor(Wizard):
-    def __int__(self, name, subject):
+    def __init__(self, name, subject):
         super().__init__(name)
         self.subject = subject
 
@@ -33,3 +33,7 @@ class Professor(Wizard):
 wizard = Wizard("Albus")        
 student = Student("Harry", "Gryffindor")
 professor = Professor("Severus","Defense Against the Dark Arts")
+
+print(wizard.name)       
+print(student.name, student.house)  
+print(professor.name, professor.subject)
