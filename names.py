@@ -9,19 +9,19 @@ for name in sorted(names):
 
 
 #OpenWith
-"""name = input("what's your name? ")
+name = input("what's your name? ")
 
 with open("names.txt","a") as file:
  file.write(f"{name}\n")
-file.close()"""
+file.close()
 
-"""with open("names.txt","r") as file:
+with open("names.txt","r") as file:
      #lines = file.readlines()
     for line in file:
-      print("hello, " ,line.rstrip())"""
+      print("hello, " ,line.rstrip())
 
 #sorted name
-"""names = []
+names = []
 
 with open("names.txt") as file:
     for line in file:
@@ -29,10 +29,10 @@ with open("names.txt") as file:
 
 for name in sorted(names):
 #for name in sorted(names, reverse=True):
-    print(f"hello, {name}")"""
+    print(f"hello, {name}")
 
 
-#
+#only print house name
 students = [
             {"name":"Hermione","house":"Gryffindor"},
             {"name":"Harry","house":"Gryffindor"},
