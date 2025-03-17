@@ -1,3 +1,4 @@
+#email validation
 import re
 email = input("what's your email? ").strip()
 
@@ -9,7 +10,7 @@ else:
     print("Invalid")
 
 
-
+#pillow
 """import sys
 
 from PIL import Image
