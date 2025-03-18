@@ -1,6 +1,5 @@
-num = int(input("Enter a number to see its times table: "))
+number = int(input("Enter the number: "))
 
-
-print(f"Times Table of {num}:")
-for i in range(1, 11):
-    print(f"{num} x {i} = {num * i}")
+for i in range (1, 11):
+    multipication = number * i
+    print(f"{number} * {i} = {multipication}")
