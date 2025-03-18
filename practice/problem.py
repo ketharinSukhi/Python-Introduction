@@ -53,7 +53,19 @@ for i in range (1, number+1):
 #square
 
 print("Square :\n")
+
+for i in range(number):
+    for j in range(number):
+        print("*", end=" ")
+
+    print("")
+
+
+#diamond
+
+
     
+
     
 
 
