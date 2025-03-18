@@ -30,13 +30,13 @@ for i in range (1, num):
 
 #pyramid 4
 
-num = number+1
-for i in range (1, num):
-    for j in range(num-i):
-        print(" ", end="")
-    for m in range(i):
 
-        print("*", end="")   
+for i in range (1, num):
+    for j in range(i):
+        print(" ", end="")
+    for m in range(num-1):
+        print("*", end="")
+    num = num-1   
     print(" ")
 
 
