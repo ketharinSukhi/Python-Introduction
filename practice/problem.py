@@ -28,6 +28,18 @@ for i in range (1, num):
     print(" ")
 
 
+#pyramid 4
+
+num = number+1
+for i in range (1, num):
+    for j in range(num-i):
+        print(" ", end="")
+    for m in range(i):
+
+        print("*", end="")   
+    print(" ")
+
+
 #pyramid 3
 for i in range (1, number+1):
     for j in range(number-i):
