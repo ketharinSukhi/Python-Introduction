@@ -6,4 +6,12 @@ except ZeroDivisionError:
 else:
     print("Result:", result)  
 finally:
-    print("This always runs!")
+    print("Finally runs")
+
+#raise 
+age = int(input("Enter your age: "))
+
+if age < 18:
+    raise ValueError("Age must be 18 or above!") 
+else:
+    print("You are eligible!")
