@@ -29,7 +29,7 @@ for i in range (1, num):
 
 
 #pyramid 4
-print("pyramid 4\n")
+"""print("pyramid 4\n")
 
 for i in range (1, num):
     for j in range(i):
@@ -58,12 +58,26 @@ for i in range(number):
     for j in range(number):
         print("*", end=" ")
 
-    print("")
+    print("")"""
 
 
 #diamond
 
+print("diamond\n")
+for i in range (1, number+1):
+    for j in range(number-i):
+        print(" ", end="")
+    for m in range(i):
+        print("*", end=" ")
+    print(" ")
 
+for i in range (1, num):
+    for j in range(i):
+        print(" ", end="")
+    for m in range(num-1):
+        print("*", end=" ")
+    num = num-1   
+    print(" ")
     
 
     
