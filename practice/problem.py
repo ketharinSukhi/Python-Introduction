@@ -1,13 +1,10 @@
-number = int(input("Enter the number: "))
-
-for i in range (number):
-    for j in range(number):
-        print(j)
-
-for letter in "Python":
-    print(letter)
 
 
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(f"({i}, {j})", end=" ")
+
+print(" ")
 
 
 
