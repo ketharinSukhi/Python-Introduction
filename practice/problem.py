@@ -1,5 +1,14 @@
 number = int(input("Enter the number: "))
 
-for i in range (1, 11):
-    multipication = number * i
-    print(f"{number} * {i} = {multipication}")
+for i in range (number):
+    for j in range(number):
+        print(j)
+
+for letter in "Python":
+    print(letter)
+
+
+
+
+
+    
