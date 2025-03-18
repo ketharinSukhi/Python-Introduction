@@ -10,7 +10,7 @@ for i in range (1, number+1):
 
 for i in range (1, number+1):
     for j in range(i):
-        print(" o", end="")
+        print(" ", end="")
     print("*")
 
 print("\n\n")
