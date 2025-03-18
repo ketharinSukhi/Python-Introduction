@@ -71,12 +71,12 @@ for i in range (1, number+1):
         print("*", end=" ")
     print(" ")
 
-for i in range (1, num):
+for i in range (1, number):
     for j in range(i):
         print(" ", end="")
-    for m in range(num-1):
+    for m in range(number-1):
         print("*", end=" ")
-    num = num-1   
+    number = number-1   
     print(" ")
     
 
