@@ -24,9 +24,18 @@ def hangman():
             continue
         
 
-
-
-    
+        guessed_letters.add(guess)
+        
+        if guess in word_to_guess:
+            print("Good job! That letter is in the word.")
+            if set(word_to_guess) <= guessed_letters:
+                print(f"Congratulations! You guessed the word: {word_to_guess}")
+                break
+        else:
+            attempts -= 1
+            print(f"Incorrect! You have {attempts} attempts left.")
+    else:
+        print(f"Game over! The word was: {word_to_guess}")
 
 def main():
     
