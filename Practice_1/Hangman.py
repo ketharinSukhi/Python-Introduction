@@ -19,6 +19,13 @@ def hangman():
         print("\n" + display_word(word_to_guess, guessed_letters))
         guess = input("Guess a letter: ").lower()
 
+        if len(guess) != 1 or not guess.isalpha():
+            print("Invalid input. Please enter a single letter.")
+            continue
+        
+
+
+
     
 
 def main():
