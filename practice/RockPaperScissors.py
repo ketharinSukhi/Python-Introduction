@@ -2,11 +2,14 @@ import random
 print ("WELCOME TO ROCK PAPER SCISSOR GAME !!!")
 
 def computer_choice():
-    random.choice(["rock","paper","scissor"])
+    return random.choice(["rock","paper","scissor"])
 
 def user_choice():
-
-
+   choice = input("Enter rock, paper or scissors: ")
+   while choice not in ["rock","paper","scissor"]:
+        print("Invalid choice :(")
+        choice = input("Enter rock, paper or scissors: ")
+   return choice
 
 def winner(user, computer):
 
