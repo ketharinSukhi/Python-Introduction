@@ -11,19 +11,18 @@ def display_word(word, guessed_letters):
 def hangman():
     word_to_guess = choose_word()
     guessed_letters = set()
-    attempts =6
+    attempts =10
 
     print("WELCOME TO HANGMAN GAME !!")
 
     while attempts >0:
-        print("\n" + display_word(word_to_guess, guessed_letters))
+        print("\n", display_word(word_to_guess, guessed_letters))
         guess = input("Guess a letter: ").lower()
 
         if len(guess) != 1 or not guess.isalpha():
-            print("Invalid input. Please enter a single letter.")
+            print("Please enter a single letter.")
             continue
         
-
         guessed_letters.add(guess)
         
         if guess in word_to_guess:
