@@ -1,18 +1,15 @@
-
+#QUIZ 
 class Question:
     def __init__(self, text, answer):
         self.text = text
         self.answer = answer
 
     def check_answer(self, given_answer):
-
-        return self.answer.lower() == given_answer.lower()
-             
+        return self.answer.lower() == given_answer.lower()            
 class Quiz:
     def __init__(self, file_path):
         self.questions = self.questions_load(file_path)
         self.score = 0
-
     def questions_load(self, file_path):
         questions = []
         try:
@@ -23,10 +20,9 @@ class Quiz:
         except FileNotFoundError:
             print("Error: Quiz file not found")
             return []
+        
         return questions
-    
     def run_quiz(self):
-
         for question in self.questions :
             while True:
                 try:
@@ -41,9 +37,9 @@ class Quiz:
                 print("✅ Correct!")  
                 self.score +=1
             else:
-                print(f"❌ Answer is Wrong! The correct answer is {question.answer}")
+                print(f"Answer is Wrong! The correct answer is {question.answer}")
 
-        print(f"\n🎉 Quiz Completed! Your final score: {self.score}/{len(self.questions)}") 
+        print(f"\nQuiz Completed! Your final score: {self.score}/{len(self.questions)}") 
  
 quiz =Quiz("Quiz.txt")
 quiz.run_quiz()

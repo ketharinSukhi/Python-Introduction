@@ -5,3 +5,5 @@ What is the most popular ice cream flavor in the world?,Chocolate
 What's the name of the longest river in the world?,Amazon River
 What color is the sun?,Yellow
 What is the capital city of Japan?,Tokyo 
+What is the smallest continent by land area?,Australia 
+What is the chemical formula for water?,H2O
