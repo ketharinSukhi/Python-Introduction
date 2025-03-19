@@ -3,3 +3,5 @@ What is the capital of France?,Paris
 What is 5 + 3?,8
 What is the most popular ice cream flavor in the world?,Chocolate
 What's the name of the longest river in the world?,Amazon River
+What color is the sun?,Yellow
+What is the capital city of Japan?,Tokyo 

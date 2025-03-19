@@ -41,7 +41,7 @@ class Quiz:
                 print("✅ Correct!")  
                 self.score +=1
             else:
-                print(f"❌ Wrong! The correct answer is {question.answer}")
+                print(f"❌ Answer is Wrong! The correct answer is {question.answer}")
 
         print(f"\n🎉 Quiz Completed! Your final score: {self.score}/{len(self.questions)}") 
  
