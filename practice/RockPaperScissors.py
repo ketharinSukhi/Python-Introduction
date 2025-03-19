@@ -12,6 +12,10 @@ def winner(user, computer):
 
 
 def play_game():
+   user_choice = user_choice()
+   computer_choice = computer_choice()
+   print(f"Computer Chose : {computer_choice}")
+   print(winner(user_choice, computer_choice))
 
 def main():
     play_game()
