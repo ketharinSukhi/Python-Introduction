@@ -18,6 +18,9 @@ def check_winner(board, player):
         return True
     
     return False 
+def is_full(board):
+    """Checks if the board is full, leading to a tie."""
+    return all(all(cell != " " for cell in row) for row in board)
        
 def get_player_move():
     while True:
