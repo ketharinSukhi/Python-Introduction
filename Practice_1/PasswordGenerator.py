@@ -16,7 +16,7 @@ def main():
         if length < 4:
             print("Password length should be at least 4 characters")
             return
-        
+        print("Here are your passwords:")
         for _ in range(passwords_num):
             print(generate_password(length))
     except ValueError:
