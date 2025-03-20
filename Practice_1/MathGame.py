@@ -1,8 +1,8 @@
 import random
 
 def generate_question():
-   number1 = random.randint(1, 100)
-   number2 = random.randint(1, 100)
+   number1 = random.randint(1, 10)
+   number2 = random.randint(1, 10)
    operator = random.choice(["+","-","*","/"])
 
    if operator == "/":
@@ -15,7 +15,7 @@ def generate_question():
 
 def math_game():
     score = 0
-    attempts =10
+    attempts =int(input("How many times you want to attempt the game : "))
 
     for _ in range(attempts):
         question, correct_answer = generate_question()
@@ -36,7 +36,7 @@ def math_game():
 
 
 def main():
-    print("WELCOME TO MATH GAME")
+    print("\n--------------------------------- WELCOME TO MATH GAME ---------------------------------\n")
     math_game()
 
 if __name__ == "__main__":
