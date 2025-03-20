@@ -6,7 +6,7 @@ def generate_question():
    operator = random.choice(["+","-","*","/"])
 
    if operator == "/":
-        number1 = number1 / number2
+        number1 = number1 * number2
 
    question = f"{number1}{operator}{number2}"
    answer = eval(question)
@@ -23,16 +23,21 @@ def math_game():
 
         try:
             user_answer = float(input("Your answer : "))
-             if user_answer == correct_answer:
-                    print("✅ Correct!\n")
+            if user_answer == correct_answer:
+                print("✅ Correct!\n")
                 score += 1
+            
+            else:
+                print(f"❌ Wrong! The correct answer was {correct_answer}\n")
+        except ValueError:
+            print("⚠️ Invalid input. Please enter a number.\n")
 
-
+    print(f"Game over! Your final score: {score}/{attempts}")
 
 
 def main():
     print("WELCOME TO MATH GAME")
+    math_game()
 
-
-if __name__=="__main":
+if __name__ == "__main__":
     main()
