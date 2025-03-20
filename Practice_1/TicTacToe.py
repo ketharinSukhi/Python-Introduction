@@ -11,6 +11,8 @@ def get_player_move():
             if move<0 or move >= 9:
                 raise ValueError
             return divmod(move, 3)
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 9.")
 
 def tic_tac_toe():
     board = [[" " for _ in range(3)] for _ in range(3)]
