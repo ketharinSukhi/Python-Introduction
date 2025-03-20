@@ -2,16 +2,20 @@ import random
 
 def generate_password(length):
 
-def get_password():
+def main():
 
     try:
-        passwords = input("How many password you want to generate : ")
+        passwords_num = input("How many password you want to generate : ")
         length = int(input("Enter the password length : "))
 
         if length < 4:
-            
-
-def main():
+            print("Password length should be at least 4 characters")
+            return
+        
+        for _ in range(passwords_num):
+            print(generate_password(length))
+    except ValueError:
+        print("enter valid number")
 
 if __name__=="__main__":
     main()
