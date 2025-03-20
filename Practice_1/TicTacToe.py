@@ -4,6 +4,7 @@ def print_board(board):
     for row in board:
         print("   | ".join(row))
         print("-" * 15)
+       
 def get_player_move():
     while True:
         try:
@@ -20,6 +21,17 @@ def tic_tac_toe():
     current_player = random.choice(players)
     print("\nWELCOME TO TIC-TAC-TOE !\n")
     print_board(board)
+
+    while True:
+        print(f"{current_player}'s turn.")
+        row, col = get_player_move()
+
+        if board[row][col] == " ":
+            board[row][col] = current_player
+        else:
+            print("That spot is already taken. Try again.")
+            continue
+
 
 def main():
     tic_tac_toe()
