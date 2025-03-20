@@ -14,7 +14,19 @@ def generate_question():
    return question, round(answer, 2)
 
 def math_game():
-    
+    score = 0
+    attempts =10
+
+    for _ in range(attempts):
+        question, correct_answer = generate_question()
+        print(f"Question : {question} = ?")
+
+        try:
+            user_answer = float(input("Your answer : "))
+             if user_answer == correct_answer:
+                    print("✅ Correct!\n")
+                score += 1
+
 
 
 
