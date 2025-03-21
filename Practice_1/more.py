@@ -48,8 +48,23 @@ while running:
 new_head = (snake[0][0] + snake_dir[0], snake[0][1] + snake_dir[1])
 
 #check for collisions
-if new_head in snake or new_head[0] <0 or new_head[0] >= width or \
-new_head[1]<0 or new_head[1] >= height:
+if new_head in snake or new_head[0] <0 or new_head[0] >= width or new_head[1]<0 or new_head[1] >= height:
     running = False
     break
+
+snake.insert(0, new_head)
+
+#check if food is eaten
+if new_head == food:
+    score += 1
+    food = (random.randint(0,(width // cell_size)-1)* cell_size,
+            random.randint(0,(height // cell_size)-1) * cell_size)
+
+else:
+    snake.pop()
+
+#Draw snake
+
+for segment in snake:
+    pygame.draw
 
