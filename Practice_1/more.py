@@ -1,10 +1,16 @@
-import time
+import pygame 
+import random
 
-start_time = time.time()
+pygame.init()
 
-input("Press Enter to stop the stopwatch...")
+#constants
+width, height = 600, 400
+cell_size = 20
+white = (255, 255, 255)
+green = (0, 255, 0)
+red = (255, 0, 0)
+black = (0, 0, 0)
 
-end_time = time.time()
+#game window
 
-elapsed_time = end_time - start_time
-print(f"Elapsed time: {elapsed_time} seconds")
+screen = pygame.display.set_mode(width, height)
