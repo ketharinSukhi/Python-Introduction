@@ -13,8 +13,8 @@ black = (0, 0, 0)
 
 #game window
 
-screen = pygame.display.set_mode(width, height)
-pygame.display.set_caption("SNAKKE GAME")
+screen = pygame.display.set_mode((width, height))
+pygame.display.set_caption("SNAKE GAME")
 
 #snake initialization
 snake = [(100, 100), (90, 100), (80, 100)]
@@ -45,26 +45,32 @@ while running:
             elif event.key == pygame.K_RIGHT and snake_dir != (-cell_size, 0):
                 snake_dir = (cell_size, 0)
 #move snake
-new_head = (snake[0][0] + snake_dir[0], snake[0][1] + snake_dir[1])
+    new_head = (snake[0][0] + snake_dir[0], snake[0][1] + snake_dir[1])
 
 #check for collisions
-if new_head in snake or new_head[0] <0 or new_head[0] >= width or new_head[1]<0 or new_head[1] >= height:
-    running = False
-    break
+    if new_head in snake or new_head[0] <0 or new_head[0] >= width or new_head[1]<0 or new_head[1] >= height:
+        running = False
+        break
 
-snake.insert(0, new_head)
+    snake.insert(0, new_head)
 
 #check if food is eaten
-if new_head == food:
-    score += 1
-    food = (random.randint(0,(width // cell_size)-1)* cell_size,
+    if new_head == food:
+        score += 1
+        food = (random.randint(0,(width // cell_size)-1)* cell_size,
             random.randint(0,(height // cell_size)-1) * cell_size)
 
-else:
-    snake.pop()
+    else:
+      snake.pop()
 
 #Draw snake
 
-for segment in snake:
-    pygame.draw.rect(screen, green,(segment[0], segment[1], cell_size, cell_size))
+    for segment in snake:
+      pygame.draw.rect(screen, green,(segment[0], segment[1], cell_size, cell_size))
 
+    pygame.draw.rect(screen, red, (food[0], food[1], cell_size, cell_size))
+    
+    pygame.display.flip()
+    clock.tick(10)
+
+pygame.quit()
