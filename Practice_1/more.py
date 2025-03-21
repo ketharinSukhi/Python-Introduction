@@ -19,9 +19,15 @@ pygame.display.set_caption("SNAKE GAME")
 snake = [(100, 100), (90, 100), (80, 100)]
 snake_dir = (cell_size, 0)
 
+def generate_food():
+    while True:
+        food = (random.randint(0, (width // cell_size)-1) * cell_size,
+                random.randint(0, (height // cell_size)-1) * cell_size)
+        if food not in snake:  # Ensure food is not inside the snake
+            return food
+
 # Food initialization
-food = (random.randint(0, (width // cell_size)-1) * cell_size,
-        random.randint(0, (height // cell_size)-1) * cell_size)
+food = generate_food()
 
 clock = pygame.time.Clock()
 score = 0
@@ -71,8 +77,7 @@ while running:
     # Check if food is eaten
     if new_head == food:
         score += 1
-        food = (random.randint(0, (width // cell_size)-1)* cell_size,
-            random.randint(0, (height // cell_size)-1) * cell_size)
+        food = generate_food()
     else:
         snake.pop()
 
@@ -87,6 +92,6 @@ while running:
     draw_score()
     
     pygame.display.flip()
-    clock.tick(5)
+    clock.tick(7)
 
 pygame.quit()
