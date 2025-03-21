@@ -44,3 +44,12 @@ while running:
                 snake_dir = (-cell_size, 0)
             elif event.key == pygame.K_RIGHT and snake_dir != (-cell_size, 0):
                 snake_dir = (cell_size, 0)
+#move snake
+new_head = (snake[0][0] + snake_dir[0], snake[0][1] + snake_dir[1])
+
+#check for collisions
+if new_head in snake or new_head[0] <0 or new_head[0] >= width or \
+new_head[1]<0 or new_head[1] >= height:
+    running = False
+    break
+
