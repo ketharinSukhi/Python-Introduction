@@ -22,3 +22,11 @@ button_font = pygame.font.Font(None, 30)
 start_time = 0
 elapsed_time = 0
 running = False
+
+def main():
+    global start_time, elapsed_time, running
+    clock = pygame.time.Clock()
+    running_game = True
+
+if __name__ == "__main__":
+    main()
