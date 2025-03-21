@@ -66,5 +66,5 @@ else:
 #Draw snake
 
 for segment in snake:
-    pygame.draw
+    pygame.draw.rect(screen, green,(segment[0], segment[1], cell_size, cell_size))
 
