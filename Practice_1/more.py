@@ -34,4 +34,13 @@ while running:
     #event handling
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-
+             running = False
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_UP and snake_dir != (0, cell_size):
+                snake_dir = (0, -cell_size)
+            elif event.key == pygame.K_DOWN and snake_dir != (0, -cell_size):
+                snake_dir = (0, cell_size)
+            elif event.key == pygame.K_LEFT and snake_dir != (cell_size, 0):
+                snake_dir = (-cell_size, 0)
+            elif event.key == pygame.K_RIGHT and snake_dir != (-cell_size, 0):
+                snake_dir = (cell_size, 0)
