@@ -20,3 +20,18 @@ pygame.display.set_caption("SNAKKE GAME")
 snake = [(100, 100), (90, 100), (80, 100)]
 snake_dir = (cell_size, 0)
 
+#food initialization
+food = (random.randint(0, (width // cell_size)-1) * cell_size,
+        random.randint(0, (height // cell_size)-1) * cell_size)
+
+clock = pygame.time.Clock()
+score = 0
+running = True
+
+while running:
+    screen.fill(black)
+
+    #event handling
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+
