@@ -13,4 +13,6 @@ black = (0, 0, 0)
 
 #game window
 
-screen = pygame.display.set_mode(width, height)
+screen = pygame.display.set_mode(600, 400)
+pygame.display.set_caption("SNAKKE GAME")
+
